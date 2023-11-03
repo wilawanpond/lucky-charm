@@ -12,6 +12,28 @@ Things to do!
 // Import the package
 const prompt = require("prompt-sync")(); // get player inputs
 
+// Create the slot machine!
+const ROWS = 3;
+const COLS = 3;
+
+// "" is key and follow the : sign is value
+// This shows the symbols that you can possibly have in each row or column (we will randomly select)
+const SYMBOL_COUNT = {
+    "A": 2,
+    "B": 4,
+    "C": 6,
+    "D": 8
+}
+
+// These are the value for each symbol
+// Ex; if you get the line of C, you bet will get multiply by 3 😋
+const SYMBOL_VALUE = {
+    "A": 5,
+    "B": 4,
+    "C": 3,
+    "D": 2
+}
+
 // Create a function for "deposit" (new style)
 const deposit = () => {
 
@@ -63,5 +85,5 @@ const getBet = (balance, lines) => {
 }
 
 let balance = deposit(); // Change the variable from const to let, so we can change the value
-const numberOfLines = getNumberOfLines(); // Call the number of lines function to be stored in the constant
-const bet = getBet(balance, lines);
+const numberOfLines = getNumberOfLines(); // Call the getNumberOfLines function to be stored in the constant
+const bet = getBet(balance, lines); // Call the getBet function to be stored in the constant
