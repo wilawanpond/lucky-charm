@@ -79,7 +79,7 @@ const getBet = (balance, lines) => {
         if (isNaN(numberOfBet) || numberOfBet <= 0 || numberOfBet > balance / lines) {
             console.log("Invalid bet, try again");
         } else {
-            return numberOfBet;
+            return numberOfBet; // Break the loop
         }
     }
 };
@@ -87,8 +87,12 @@ const getBet = (balance, lines) => {
 // Create a function for spinning the slot machine
 const spin = () => {
     const symbols = []; // array
-    // loop using for loop
-    // Create an array inside the for loop to store the symbol and the value from SYMBOL_COUNT
+    /*Code Exaplanation 😃
+        - Create an array name "symbols" to store every elements from SYMBOL_COUNT
+        - Create a for...of loop that will help with storing elements from SYMBOL_COUNT
+            - Using const [symbol, count] to store elements from SYMBOL_COUNT -> destructing each pair into seperate variables
+            - Using for loop to store only symbol and just count the amount of each symbol!
+    */
     for (const [symbol, count] of Object.entries(SYMBOL_COUNT)) {
         // add these symbols to symbols[]
         for (let i = 0; i < count; i++) {
@@ -96,9 +100,10 @@ const spin = () => {
         }
     }
 
-    //
+    // Randomly selected the symbols
     const reels = []; // Create 3 nested arrays and each array represents the column for the slot machine, using symbols[]
-    // go through eavh one of reels
+
+    // If for loop of COLS and have for loop of ROWS nested -> horizontal is COLS and vertical is ROWS
     for (let i = 0; i < COLS; i++) { // how many iteration that we need to perform (i)
         reels.push([]);
         const reelSymbols = [...symbols]; // get the available symbols from symbols[] to choose for each reel into another array -> reelSymbols
@@ -115,7 +120,18 @@ const spin = () => {
     return reels;
 };
 
-spin();
+// Transpose the matrix (the reels)
+/* Originally the result from "spin" function is [A, C, D], [B, B, A], [C, D, A]
+This [A, C, D] is not excactly a role is just a COLUMN! -> Col1, Col2, Col3
+This is how it sypposed to be;
+[A, B, C] -> A(row1 col1), B(row1 col2), C(row1 col3)
+[C, B, D] -> C(row2 col1), B(row2 col2), D(row2 col3)
+[D, A, A] -> D(row3 col1), A(row3 col2), A(row3 col3)
+*/
+
+
 let balance = deposit(); // Change the variable from const to let, so we can change the value
 const numberOfLines = getNumberOfLines(); // Call the getNumberOfLines function to be stored in the constant
-const bet = getBet(balance, lines); // Call the getBet function to be stored in the constant
+const bet = getBet(balance, numberOfLines); // Call the getBet function to be stored in the constant
+const reels = spin();
+console.log(reels);
