@@ -95,6 +95,24 @@ const spin = () => {
             symbols.push(symbol); // add symbol to symbols[]
         }
     }
+
+    //
+    const reels = []; // Create 3 nested arrays and each array represents the column for the slot machine, using symbols[]
+    // go through eavh one of reels
+    for (let i = 0; i < COLS; i++) { // how many iteration that we need to perform (i)
+        reels.push([]);
+        const reelSymbols = [...symbols]; // get the available symbols from symbols[] to choose for each reel into another array -> reelSymbols
+        for (let j = 0; j < ROWS; j++) { 
+            // randomly selecting symbols from reelSymbols array
+            const randomIndex = Math.floor(Math.random() * reelSymbols.length); // Math.floor used to round the number to almost whole number
+            const selectedSymbol = reelSymbols[randomIndex];
+            reels[i].push(selectedSymbol);
+
+            // remove the symbol so we cannot select it again (for each reel)
+            reelSymbols.splice(randomIndex, 1); // remove the elements that randomIndex get, remove 1 element
+        }
+    }
+    return reels;
 };
 
 spin();
