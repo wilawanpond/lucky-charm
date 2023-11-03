@@ -128,10 +128,20 @@ This is how it sypposed to be;
 [C, B, D] -> C(row2 col1), B(row2 col2), D(row2 col3)
 [D, A, A] -> D(row3 col1), A(row3 col2), A(row3 col3)
 */
+const transpose = (reels) => {
+    // Create a new array for rows
+    const rows = [];
+
+    for (let i = 0; i < ROWS; i++) {
+        rows.push([]);
+        for (let j = 0; j < COLS; j++) {
+            rows[i].push([j][i]);
+        }
+    }
+}
 
 
 let balance = deposit(); // Change the variable from const to let, so we can change the value
 const numberOfLines = getNumberOfLines(); // Call the getNumberOfLines function to be stored in the constant
 const bet = getBet(balance, numberOfLines); // Call the getBet function to be stored in the constant
 const reels = spin();
-console.log(reels);
