@@ -47,5 +47,5 @@ const getNumberOfLines = () => {
 
 };
 
-const depositAmount = deposit(); // Call the deposit function to be stored in the constant
+let balance = deposit(); // Change the variable from const to let, so we can change the value
 const numberOfLines = getNumberOfLines(); // Call the number of lines function to be stored in the constant
