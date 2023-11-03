@@ -47,5 +47,21 @@ const getNumberOfLines = () => {
 
 };
 
+// Create a function for collecting the total bet
+const getBet = (balance) => {
+    while (true) {
+        const bet = prompt("Enter the total bet: ");
+        const numberOfBet = parseFloat(bet);
+
+        //Check the validation of the input
+        if (isNaN(numberOfBet) || numberOfBet <= 0 || numberOfBet > balance) {
+            console.log("Invalid bet, try again")
+        } else {
+            return numberOfBet;
+        }
+    }
+}
+
 let balance = deposit(); // Change the variable from const to let, so we can change the value
 const numberOfLines = getNumberOfLines(); // Call the number of lines function to be stored in the constant
+const bet = getBet(balance);
