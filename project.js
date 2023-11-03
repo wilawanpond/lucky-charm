@@ -17,4 +17,9 @@ const deposit = () => {
     const depositAmount = prompt("Enter a deposit amount: ");
     // Convert string to number
     const numberDepositAmount = parseFloat(depositAmount);
+
+    // Check the validation of the input
+    if (isNaN(numberDepositAmount) || numberDepositAmount <= 0) {
+        console.log("Invalid deposit amount, try again!")
+    }
 };
