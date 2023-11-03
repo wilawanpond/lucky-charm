@@ -30,5 +30,22 @@ const deposit = () => {
     }
 };
 
-const depositAmount = deposit(); // Call the function to be stored in the constant
-console.log(depositAmount);
+// Create a function for number of lines to bet on
+const getNumberOfLines = () => {
+    while (true) {
+        const lines = prompt("Enter the number of lines to bet on (1-3): ");
+        // Convert string to number (if need be)
+        const numberOfLines = parseFloat(lines);
+
+        // Check the validation of the input
+        if (isNaN(numberOfLines) || numberOfLines <= 0 || numberOfLines > 3) {
+            console.log("Invalid number of lines, try again!")
+        } else {
+            return numberOfLines; // Break the loop
+        }
+    }
+
+};
+
+const depositAmount = deposit(); // Call the deposit function to be stored in the constant
+const numberOfLines = getNumberOfLines(); // Call the number of lines function to be stored in the constant
