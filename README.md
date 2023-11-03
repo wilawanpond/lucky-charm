@@ -1,0 +1,2 @@
+# lucky-charm
+ Javascript project
