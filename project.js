@@ -8,3 +8,11 @@ Things to do!
     6. Give the user their winnings
     7. Play again!
 */
+
+// Import the package
+const prompt = require("prompt-sync")(); // get player inputs
+
+// Create a function for "deposit" (new style)
+const deposit = () => {
+    const depositAmount = prompt("Enter a deposit amount: ");
+};
