@@ -15,4 +15,6 @@ const prompt = require("prompt-sync")(); // get player inputs
 // Create a function for "deposit" (new style)
 const deposit = () => {
     const depositAmount = prompt("Enter a deposit amount: ");
+    // Convert string to number
+    const numberDepositAmount = parseFloat(depositAmount);
 };
