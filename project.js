@@ -121,7 +121,7 @@ const spin = () => {
 };
 
 // Transpose the matrix (the reels)
-/* Originally the result from "spin" function is [A, C, D], [B, B, A], [C, D, A]
+/* Originally the result from "spin" function is [A, C, D], [B, B, A], [C, D, A] (randomly)
 This [A, C, D] is not excactly a role is just a COLUMN! -> Col1, Col2, Col3
 This is how it sypposed to be;
 [A, B, C] -> A(row1 col1), B(row1 col2), C(row1 col3)
@@ -156,6 +156,29 @@ const printSlotMachine = (rows) => {
     }
 };
 
+// Create a function for checking if the player won
+const getWinnings = (rows, bet, lines) => {
+    let winnings = 0; // counting
+
+    // Check 3 lines of slot machine
+    for (let row = 0; row < lines; row++) {
+        const symbols = rows[row]; // at whatever the row index is
+        // Check for all variables in the row
+        let allSame = true;
+
+        for (const symbol of symbols) { // loop through every symbol
+            if (symbol != symbols[0]) {
+                allSame = false; // Not winning!
+                break;
+            }
+        }
+
+        if (allSame) {
+            winnings += bet * SYMBOL_VALUE[symbols[0]]; // we know that all of them are the same symbol, we can check any index
+        }
+    }
+    return winnings;
+};
 
 
 let balance = deposit(); // Change the variable from const to let, so we can change the value
@@ -164,3 +187,5 @@ const bet = getBet(balance, numberOfLines); // Call the getBet function to be st
 const reels = spin();
 const rows = transpose(reels);
 printSlotMachine(rows);
+const winnings = getWinnings(rows, bet, numberOfLines);
+console.log("You won, $" + winnings.toString());
