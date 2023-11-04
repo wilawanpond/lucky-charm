@@ -19,4 +19,10 @@ Original code from techwithtim: [JavaScript Code](https://github.com/techwithtim
 ### How to play this game (Installation) 💗
 Please make sure that you already have [Node.js](https://nodejs.org/en/download "Node.js Downloads") installed.
 
-You can check it by type `node -v` or `npm -v`
+You can check it by opening your terminal and type `node -v` or `npm -v`
+
+1. Clone the repository of this project, open your terminal and run the following command:
+`git clone https://github.com/wilawanpond/lucky-charm.git`
+2. Install dependencies by `npm install`
+3. To start the game, run the following command `node project.js`
+4. Have fun with the game!
