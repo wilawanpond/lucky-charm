@@ -21,11 +21,12 @@ Please make sure that you already have [Node.js](https://nodejs.org/en/download 
 
 You can check it by opening your terminal and type `node -v` or `npm -v`
 
-1. Clone the repository of this project, open your terminal and run the following command 
-    1.1. Create a folder or you can use any existing folders
-    1.2. Copy the folder path
-    1.3. Open Git Bash and then paste the path that you copied `cd "YOUR COPIED PATH"`
-    1.4. Then `git clone https://github.com/wilawanpond/lucky-charm.git`
+1. Clone the repository of this project, open your terminal and run the following command  
+    1.1. Create a folder or you can use any existing folders  
+    1.2. Copy the folder path  
+    1.3. Open Git Bash and then paste the path that you copied `cd "YOUR COPIED PATH"`  
+    1.4. Then `git clone https://github.com/wilawanpond/lucky-charm.git`  
+    
 2. Install dependencies by `npm install`
 3. To start the game, run the following command `node project.js`
 4. Have fun with the game!
