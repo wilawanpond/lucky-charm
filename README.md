@@ -1,6 +1,4 @@
-# <center> Lucky Charm 🍀 </center>
-## <center> A fully functional slot machine game written in JavaScript </center>
+# Lucky Charm 🍀
+A fully functional slot machine game written in JavaScript
 
 ### Appreciation🙏🏻
-
-
