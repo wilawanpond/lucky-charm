@@ -1,1 +1,3 @@
-![Banner](Images/LUCKY%20CHARM.gif)
+<p align="center">
+    <img src="Images/LUCKY CHARM.gif">
+</p>
