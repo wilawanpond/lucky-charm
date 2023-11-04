@@ -16,3 +16,7 @@ YouTube video from Tim With Tech: [JavaScript Project Video](https://youtu.be/E3
 
 Original code from techwithtim: [JavaScript Code](https://github.com/techwithtim/JavaScript-Slot-Machine.git "JavaScript-Slot-Machine")
 
+### How to play this game (Installation) 💗
+Please make sure that you already have [Node.js](https://nodejs.org/en/download "Node.js Downloads") installed.
+
+You can check it by type `node -v` or `npm -v`
