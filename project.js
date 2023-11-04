@@ -180,12 +180,34 @@ const getWinnings = (rows, bet, lines) => {
     return winnings;
 };
 
+// Create a game loop
+const game = () => {
+    let balance =deposit();
 
-let balance = deposit(); // Change the variable from const to let, so we can change the value
-const numberOfLines = getNumberOfLines(); // Call the getNumberOfLines function to be stored in the constant
-const bet = getBet(balance, numberOfLines); // Call the getBet function to be stored in the constant
-const reels = spin();
-const rows = transpose(reels);
-printSlotMachine(rows);
-const winnings = getWinnings(rows, bet, numberOfLines);
-console.log("You won, $" + winnings.toString());
+    while (true) {
+        // Tell the players about their balance
+        console.log("You have a balance of $" + balance);
+
+        const numberOfLines = getNumberOfLines(); // Call the getNumberOfLines function to be stored in the constant
+        const bet = getBet(balance, numberOfLines); // Call the getBet function to be stored in the constant
+        balance -= bet * numberOfLines; // Subtract the balance
+        const reels = spin();
+        const rows = transpose(reels);
+        printSlotMachine(rows);
+        const winnings = getWinnings(rows, bet, numberOfLines);
+        balance += winnings; // Add their winnings to the balance
+        console.log("You won, $" + winnings.toString()); 
+
+        // If there is no money left -> quit the game or give them the option
+        if (balance <= 0) {
+            console.log("You ran out of money!");
+            break; // break the loop
+        }
+
+        // Ask the player -> play again
+        const playAgain = prompt("Do you want to play again (y/n)? ");
+        if (playAgain != "y") break;
+    }
+};
+
+game();
