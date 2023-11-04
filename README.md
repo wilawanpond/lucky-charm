@@ -26,3 +26,6 @@ You can check it by opening your terminal and type `node -v` or `npm -v`
 2. Install dependencies by `npm install`
 3. To start the game, run the following command `node project.js`
 4. Have fun with the game!
+
+### Contributing 💗
+If you would like to submit an improvement to this project, please submit an issue using the issues tab first (in detailed explanation must be nice) and if you would like to submit a pull request, please reference the issue you created 🦭
