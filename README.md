@@ -1,6 +1,1 @@
-# <center> Lucky Charm 🍀 </center>
-## <center> A fully functional slot machine game written in JavaScript </center>
-
-### Appreciation🙏🏻
-
-
+![Banner](https://drive.google.com/file/d/1cilKPn9pkPHhSYW3IDmcFxIWBdB46soK/view?usp=sharing)
