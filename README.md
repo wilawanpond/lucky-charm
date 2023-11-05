@@ -29,3 +29,6 @@ You can check it by opening your terminal and type `node -v` or `npm -v`
 
 ### Contributing 💗
 If you would like to submit an improvement to this project, please submit an issue using the issues tab first (in detailed explanation must be nice) and if you would like to submit a pull request, please reference the issue you created 🦭
+
+### License 💗
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
