@@ -1,6 +1,6 @@
 <p align="center">
 <<<<<<< HEAD
-    <img src="Images/LUCKY CHARM.gif">
+    <img src="Image/LUCKY CHARM.gif">
 
 </p>
 
