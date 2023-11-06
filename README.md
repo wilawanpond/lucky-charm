@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="Images/LUCKY CHARM.gif">
+    <img src="Images/LUCKY CHARM.png">
 </p>
 
 ## Project Overview 💗
